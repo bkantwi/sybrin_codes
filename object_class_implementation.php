@@ -17,5 +17,10 @@ class Laptop {
   }
 }
 
-
+$dell = new Laptop();
+$dell->set_os('Bkantwi Unix');
+$dell->set_brand('alienware');
+echo "Operating Systen: " . $dell->get_os();
+echo "<br>";
+echo "Machine Brand: " . $dell->get_brand();
 ?> 
