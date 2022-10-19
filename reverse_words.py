@@ -1,21 +1,21 @@
 words = input("Enter your words: ")
-def reverse_word(words, start, end):
-	while start < end:
-		words[start], words[end] = words[end], words[start]
-		start = start + 1
-		end -= 1
+def reverse_word(words, first, last):
+	while first < last:
+		words[first], words[last] = words[last], words[first]
+		first = first + 1
+		last -= 1
 
 words = list(words)
-start = 0
+first = 0
 while True:
 	
 	try:
-		end = words.index(' ', start)
-		reverse_word(words, start, end - 1)
-		start = end + 1
+		last = words.index(' ', first)
+		reverse_word(words, first, last - 1)
+		first = last + 1
 
 	except ValueError:
-		reverse_word(words, start, len(words) - 1)
+		reverse_word(words, first, len(words) - 1)
 		break
 
 words.reverse()
