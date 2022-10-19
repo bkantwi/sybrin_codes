@@ -1,36 +1,25 @@
-def reverse_word(s, start, end):
+words = input("Enter your words: ")
+def reverse_word(words, start, end):
 	while start < end:
-		s[start], s[end] = s[end], s[start]
+		words[start], words[end] = words[end], words[start]
 		start = start + 1
 		end -= 1
 
-
-s = "i like this program very much"
-
-s = list(s)
+words = list(words)
 start = 0
 while True:
 	
 	try:
-		end = s.index(' ', start)
-
-		reverse_word(s, start, end - 1)
-
-		#Update start variable
+		end = words.index(' ', start)
+		reverse_word(words, start, end - 1)
 		start = end + 1
 
 	except ValueError:
-
-		# Reverse the last word
-		reverse_word(s, start, len(s) - 1)
+		reverse_word(words, start, len(words) - 1)
 		break
 
-# Reverse the entire list
-s.reverse()
+words.reverse()
+words = "".join(words)
 
-# Convert the list back to
-# string using string.join() function
-s = "".join(s)
-
-print(s)
+print(words)
 
