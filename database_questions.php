@@ -24,4 +24,4 @@ m.id = l.MID;
 
 <!-- Question 9 g -->
 <!-- Assuming the table in question 9 e is called emp_managers -->
-SELECT ManagerName, COUNT(*) FROM emp_managers GROUP BY Name;
+SELECT ManagerName, COUNT(*) AS StaffCount FROM emp_managers GROUP BY Name;
